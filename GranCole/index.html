@@ -9,45 +9,48 @@
 </head>
 <body>
     <div class="main-container">
+
+        <!-- IMAGEN A LA IZQUIERDA -->
+        <div class="image-section">
+            <img src="/GranCole/Fondo.jpeg" alt="Imagen decorativa" class="side-image">
+        </div>
+
+        <!-- FORMULARIO A LA DERECHA -->
         <div class="form-section">
             <div class="logo-container">
-                <!-- Asegúrate de que Logo.jpeg esté en la misma carpeta que este HTML -->
                 <img src="/GranCole/Logo.jpeg" alt="Logo GranCole">
             </div>
-            
+
             <div class="header">
                 <h1>Bienvenido a GranCole</h1>
                 <p>Unidad de la comunicación para acceder al sistema</p>
             </div>
-            
+
             <div class="login-container">
                 <h2>Iniciar Sesión</h2>
                 <p>Ingresa tus credenciales para acceder al sistema</p>
-                
-    <form id="loginForm">
-        <div class="form-group">
-        <!-- Campo Usuario -->
-            <div class="input-icon">
-                <i data-lucide="user" class="left-icon"></i>
-                <input type="text" id="username" placeholder="0000000">
-            </div>
 
-        <!-- Campo Contraseña -->
-            <div class="input-icon">
-                <i data-lucide="lock" class="left-icon"></i>
-                <input type="password" id="password" placeholder="********">
-                <i data-lucide="eye" id="togglePassword" class="right-icon" style="cursor:pointer;"></i>
-            </div>
-        </div>
+                <form id="loginForm">
+                    <div class="form-group">
+                        <!-- Campo Usuario -->
+                        <div class="input-icon">
+                            <i data-lucide="user" class="left-icon"></i>
+                            <input type="text" id="username" placeholder="0000000">
+                        </div>
 
-            <a href="#" class="forgot-password">¿Olvidaste tu contraseña?</a>
+                        <!-- Campo Contraseña -->
+                        <div class="input-icon">
+                            <i data-lucide="lock" class="left-icon"></i>
+                            <input type="password" id="password" placeholder="********">
+                            <i data-lucide="eye" id="togglePassword" class="right-icon" style="cursor:pointer;"></i>
+                        </div>
+                    </div>
 
-            
-            <button type="submit" class="login-button">Iniciar Sesión</button>
-    </form>
+                    <a href="#" class="forgot-password">¿Olvidaste tu contraseña?</a>
 
-                
-                
+                    <button type="submit" class="login-button">Iniciar Sesión</button>
+                </form>
+
                 <footer>
                     <p>¿No tienes una cuenta? <a href="#">Contacta al administrador</a></p>
                     <p>© 2025 GranCole Pro. Todos los derechos reservados.</p>
@@ -55,12 +58,8 @@
             </div>
         </div>
 
-        <div class="future-data-section">
-            <!-- Espacio reservado para integración de datos futuros -->
-        </div>
     </div>
 
     <script src="/GranCole/archivo.js"></script>
-
 </body>
 </html>
