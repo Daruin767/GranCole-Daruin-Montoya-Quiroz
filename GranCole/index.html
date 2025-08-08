@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GranCole</title>
-    <link rel="stylesheet" href="/GranCole/style.css">
+    <link rel="stylesheet" href="style.css">
     <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
@@ -12,53 +12,100 @@
 
         <!-- IMAGEN A LA IZQUIERDA -->
         <div class="image-section">
-            <img src="/GranCole/Fondo.jpeg" alt="Imagen decorativa" class="side-image">
+            <img src="/GranCole/Fondo.jpeg" alt="Imagen decorativa de fondo educativo" class="side-image">
+
+            <div class="overlay-content">
+                <div class="overlay-title">
+                    <img src="/GranCole/logo2.jpg" alt="Logo GranCole" class="overlay-title-logo">
+                    <h1>Grancole Pro</h1>
+            </div>
+                <p class="subtitle">Sistema de Gestión Educativa</p>
+
+                <h2>Gestiona tu institución educativa de manera inteligente</h2>
+
+                <p class="description">Plataforma integral para administrar estudiantes, profesores, calificaciones, asistencia y mucho más en un solo lugar.</p>
+
+                <ul class="features-list">
+                    <li>Gestión completa de estudiantes y profesores</li>
+                    <li>Sistema de calificaciones y boletines</li>
+                    <li>Control de asistencia en tiempo real</li>
+                    <li>Comunicación integrada y foros</li>
+                </ul>
+
+                <div class="stats-container">
+                    <div class="stat-box">
+                        <h3>1,234+</h3>
+                        <p>Estudiantes</p>
+                    </div>
+                    <div class="stat-box">
+                        <h3>45+</h3>
+                        <p>Cursos</p>
+                    </div>
+                    <div class="stat-box">
+                        <h3>98%</h3>
+                        <p>Certificaciones</p>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <!-- FORMULARIO A LA DERECHA -->
         <div class="form-section">
-            <div class="logo-container">
-                <img src="/GranCole/Logo.jpeg" alt="Logo GranCole">
+            <div class="form-top">
+                <div class="logo-container">
+                    <img src="/GranCole/Logo.jpeg" alt="Logo GranCole">
+                </div>
+                <div class="header">
+                    <h1>Bienvenido a GranCole</h1>
+                    <p>Unidad de la comunicación para acceder al sistema</p>
+                </div>
             </div>
 
-            <div class="header">
-                <h1>Bienvenido a GranCole</h1>
-                <p>Unidad de la comunicación para acceder al sistema</p>
-            </div>
+            <div class="form-bottom">
+                <div class="login-content">
+                    <div class="login-container">
+                        <h2>Iniciar Sesión</h2>
+                        <p>Ingresa tus credenciales para acceder al sistema</p>
 
-            <div class="login-container">
-                <h2>Iniciar Sesión</h2>
-                <p>Ingresa tus credenciales para acceder al sistema</p>
+                        <form id="loginForm">
+                            <div class="form-group">
+                                <div class="input-icon">
+                                    <i data-lucide="user" class="left-icon"></i>
+                                    <input type="text" id="username" placeholder="0000000">
+                                </div>
 
-                <form id="loginForm">
-                    <div class="form-group">
-                        <!-- Campo Usuario -->
-                        <div class="input-icon">
-                            <i data-lucide="user" class="left-icon"></i>
-                            <input type="text" id="username" placeholder="0000000">
+                                <div class="input-icon">
+                                    <i data-lucide="lock" class="left-icon"></i>
+                                    <input type="password" id="password" placeholder="********">
+                                    <i data-lucide="eye" id="togglePassword" class="right-icon"></i>
+                                </div>
+                            </div>
+
+                            <a href="#" class="forgot-password">¿Olvidaste tu contraseña?</a>
+
+                            <button type="submit" class="login-button">Iniciar Sesión</button>
+                        </form>
+
+                        <div class="login-footer">
+                            
+                                <p style="text-align: center;">¿No tienes una cuenta? <a href="#">Contacta al administrador</a></p>
+                                <p style="text-align: center;">© 2025 GranCole Pro. Todos los derechos reservados.</p>
+                            
                         </div>
 
-                        <!-- Campo Contraseña -->
-                        <div class="input-icon">
-                            <i data-lucide="lock" class="left-icon"></i>
-                            <input type="password" id="password" placeholder="********">
-                            <i data-lucide="eye" id="togglePassword" class="right-icon" style="cursor:pointer;"></i>
-                        </div>
+                        
                     </div>
-
-                    <a href="#" class="forgot-password">¿Olvidaste tu contraseña?</a>
-
-                    <button type="submit" class="login-button">Iniciar Sesión</button>
-                </form>
-
-                <footer>
-                    <p>¿No tienes una cuenta? <a href="#">Contacta al administrador</a></p>
-                    <p>© 2025 GranCole Pro. Todos los derechos reservados.</p>
-                </footer>
+                    
+                </div>
+                
             </div>
+            
         </div>
-
+        
     </div>
+        <footer>
+            <p>© 2025 GranCole Pro. Todos los derechos reservados. Diseñado por Agencia cristal</p>
+        </footer>
 
     <script src="/GranCole/archivo.js"></script>
 </body>

@@ -11,50 +11,73 @@ body {
     min-height: 960px;
 }
 
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
 /* Contenedor principal */
 .main-container {
     display: flex;
+    flex: 1;
     width: 100%;
-    height: 700px;
+    height: auto;
 }
 
 /* Sección de imagen a la izquierda */
 .image-section {
+    position: relative;
     width: 50%;
     height: 100%;
     overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: white;
 }
 
 .side-image {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Esto hace que la imagen cubra todo sin deformarse */
+    object-fit: cover;
     display: block;
 }
 
-/* Sección del formulario */
+/* Sección del formulario a la derecha */
 .form-section {
+    background-color: #ffffff; /* azul claro */
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 100%;
+    padding: 0; /* si quieres, ajusta si hay paddings */
+}
+
+/* Parte azul claro con logo */
+.form-top {
+    background-color: rgb(207, 226, 255);
+    padding: 40px 50px 20px;
+    text-align: center;
+}
+
+/* Parte blanca con login */
+.form-bottom {
+    background-color: rgb(207, 226, 255);
+    padding: 30px 50px;
+    flex-grow: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 50px;
-    background-color: #e6f2ff;
-    width: 50%;
 }
 
-/* Contenido del formulario */
+/* Contenido del login */
 .login-content {
     background-color: white;
-    padding: 40px;
+    padding: 15px;
     border-radius: 8px;
-    box-shadow: 0 0 20px rgba(0,0,0,0.1);
-    max-width: 400px;
+    max-width: 500px;
     width: 100%;
-    margin-left: 0;
+    margin: 0 auto;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1); /* opcional, para destacar */
 }
 
 /* Logo */
@@ -76,7 +99,7 @@ body {
 }
 
 .header h1 {
-    color: #333;
+    color: #333333;
     font-size: 24px;
     margin-bottom: 8px;
 }
@@ -88,12 +111,7 @@ body {
 
 /* Login container */
 .login-container {
-    padding: 20px;
-    margin: 0 auto;
-    width: 90%;
-    max-width: 400px;
-    background-color: white;
-    border-radius: 10px;
+    width: 100%;
 }
 
 .login-container h2 {
@@ -183,13 +201,20 @@ body {
 .login-button:hover {
     background-color: #0055aa;
 }
-
+.login-footer a {
+    color: #0066cc;
+    text-decoration: none;
+    
+    
+}
 /* Footer */
 footer {
     text-align: center;
     color: #666;
-    font-size: 14px;
-    margin-top: 20px;
+    font-size: 13px;
+    padding: 8px 10px;
+    background-color: #f9f9f9;
+    
 }
 
 footer a {
@@ -211,37 +236,168 @@ footer a:hover {
         flex-direction: column;
         height: auto;
     }
-    
-    .image-section,
-    .form-section {
-        width: 100%;
-        height: 300px; /* Altura fija para la imagen y el form */
-        padding: 0;
-    }
 
-    /* Imagen en móvil: ocupa todo el ancho y 300px de alto */
     .image-section {
-        order: 1;
+        width: 100%;
+        height: 60vh; /* ✅ más alto en móviles */
+        position: relative;
     }
 
     .side-image {
-        height: 100%; /* Para que cubra todo su contenedor */
         width: 100%;
+        height: 100%;
         object-fit: cover;
+        display: block;
     }
 
-    /* Formulario en móvil ocupa 100% ancho y altura automática */
+    .overlay-content {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        padding: 20px;
+        background: rgba(0, 0, 0, 0.4); /* Opcional para contraste del texto */
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
     .form-section {
-        order: 2;
-        background-color: #e6f2ff;
-        padding: 30px 20px;
+        width: 100%;
         height: auto;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .form-top,
+    .form-bottom {
+        width: 100%;
+        padding: 30px;
     }
 
     .login-content {
-        box-shadow: none;
-        padding: 20px;
         max-width: 100%;
-        margin-left: 0;
+        padding: 0;
+    }
+
+    .login-container {
+        width: 100%;
     }
 }
+
+/* Overlay en imagen */
+.overlay-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #ffffff;
+    /* background: rgba(255, 255, 255, 0.85); */
+}
+
+.overlay-content h1 {
+    font-size: 28px;
+    color: hsl(0, 0%, 100%);
+    margin-bottom: 5px;
+}
+
+.overlay-content .subtitle {
+    font-size: 16px;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.overlay-content h2 {
+    font-size: 20px;
+    color: #ffffff;
+    margin: 15px 0;
+}
+
+.overlay-content .description {
+    font-size: 15px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.features-list {
+    list-style-type: none;
+    margin: 20px 0;
+}
+
+.features-list li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.features-list li:before {
+    content: "•";
+    color: #ffffff;
+    font-size: 20px;
+    position: absolute;
+    left: 0;
+    top: -3px;
+}
+
+.stats-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    max-width: 350px;
+}
+
+.stat-box {
+    text-align: center;
+    padding: 10px;
+}
+
+.stat-box h3 {
+    font-size: 24px;
+    color: #ffffff;
+    margin-bottom: 5px;
+}
+
+.stat-box p {
+    font-size: 13px;
+    color: #ffffff;
+}
+
+.overlay-logo {
+    max-width: 80px;
+    height: auto;
+    margin-bottom: 10px;
+    border-radius: 50%;
+    box-shadow: 0 2px 6px rgba(255, 255, 255, 0.3);
+}
+
+.overlay-text {
+    font-size: 18px;
+    font-weight: bold;
+    text-shadow: 1px 1px 4px rgba(255, 255, 255, 0.5);
+}
+
+/* Contenedor del logo + texto en la cabecera superpuesta */
+.overlay-title {
+    display: flex;
+    align-items: center;
+    gap: 12px; /* Espacio entre logo y texto */
+    margin-bottom: 10px;
+}
+
+/* Logo junto al título */
+.overlay-title-logo {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
